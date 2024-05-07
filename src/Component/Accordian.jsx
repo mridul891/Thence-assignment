@@ -20,7 +20,7 @@ const Accordian = () => {
                             <span>{selected == index ? '-' : '+'}</span>
                         </div>
                         <div className={selected == index ? 'content show' : 'content'}>{item.answer}</div>
-                        <hr />
+                        <hr  className='border-[#ccd]'/>
                     </div>
                 )
             })}
