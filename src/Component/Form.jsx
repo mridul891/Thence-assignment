@@ -5,9 +5,8 @@ import * as Yup from 'yup'
 import Button from './button'
 
 import { useNavigate } from 'react-router-dom'
-import { z as zod } from 'zod';
-import { fromError } from 'zod-validation-error';
-import { useRecoilValue, useSetRecoilState } from 'recoil'
+
+import { useSetRecoilState } from 'recoil'
 import { iscompleted } from '../store/atoms/config'
 
 // create zod schema
@@ -29,10 +28,7 @@ const Form = () => {
         Fullname: Yup.string().required("First name is Required"),
         email: Yup.string().required("Email is required").email("Enter a valid email")
     })
-    // const zodSchema = zod.object({
-    //     Fullname: zod.string(),
-    //     email: zod.string().email(),
-    // });
+
 
 
     const handleChange = (e) => {

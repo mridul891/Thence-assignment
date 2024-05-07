@@ -1,13 +1,11 @@
 import Tempnavbar from "./Tempnavbar"
 import './Form.css'
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
-import useCount from "./useCount"
 
 
 const Completed = () => {
     const navigate = useNavigate()
-    const { secondsleft, start } = useCount();
+
 
     setTimeout(function () {
         navigate("/")
